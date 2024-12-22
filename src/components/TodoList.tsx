@@ -13,5 +13,19 @@ const TodoList: React.FC<TodoListProps> = ({
   toggleDone,
   deleteTodo,
 }) => {
-  return <ul></ul>;
+  return (
+    <ul className="todo-list">
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          <TodoItem
+            todo={todo}
+            toggleDone={toggleDone}
+            deleteTodo={deleteTodo}
+          />
+        </li>
+      ))}
+    </ul>
+  );
 };
+
+export default TodoList;

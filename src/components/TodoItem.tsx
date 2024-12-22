@@ -13,7 +13,7 @@ const TodoItem: React.FC<TodoItemProps> = ({
   deleteTodo,
 }) => {
   return (
-    <div>
+    <div className="todo-item">
       <input
         type="checkbox"
         checked={todo.done}
